@@ -74,6 +74,10 @@ public:
   double NIS_laser_;
   int NIS_small_nums;
   int NIS_big_nums;
+
+  MatrixXd R_lidar;
+  MatrixXd R_radar;
+  MatrixXd H_laser_;
   /**
    * Constructor
    */
@@ -112,6 +116,7 @@ public:
   void CalcXsig();
   void PredXsig(double delta_t);
   void CalcMean();
+  void NormalizeAngle(double& phi);
 };
 
 #endif /* UKF_H */
