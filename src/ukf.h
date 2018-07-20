@@ -77,6 +77,7 @@ public:
 
   MatrixXd R_lidar;
   MatrixXd R_radar;
+  MatrixXd Q_;
   MatrixXd H_laser_;
   /**
    * Constructor
